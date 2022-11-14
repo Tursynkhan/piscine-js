@@ -14,34 +14,35 @@ function dogYears(name,age){
             return Math.round(dogAge*100)/100;
             break;
         case 'mercury':
-            dogAge=age*merc*7/second;
+            dogAge=(age*7/second)/merc;
             return Math.round(dogAge*100)/100;
             break;
         case 'venus':
-            dogAge=age*ven*7/second;
+            dogAge=(age*7/second)/ven;
             return Math.round(dogAge*100)/100;
             break;
         case 'mars':
-            dogAge=age*mars*7/second;
+            dogAge=(age*7/second)/mars;
             return Math.round(dogAge*100)/100;
             break;
         case 'jupiter':
-            dogAge=age*jupiter*7/second;
+            dogAge=(age*7/second)/jupiter;
             return Math.round(dogAge*100)/100;
             break;
         case 'saturn':
-            dogAge=age*saturn*7/second;
+            dogAge=(age*7/second)/saturn;
             return Math.round(dogAge*100)/100;
             break;
         case 'uranus':
-            dogAge=age*uranus*7/second;
+            dogAge=(age*7/second)/uranus;
             return Math.round(dogAge*100)/100;
             break;
         case 'neptune':
-            dogAge=age*neptune*7/second;
+            dogAge=(age*7/second)/neptune;
             return Math.round(dogAge*100)/100;
             break;
         default:
             break;
     }
 }
+console.log(dogYears('mercury', 2134835688))
