@@ -1,3 +1,2 @@
-let circular={
-    circular:'circular',
-}
+let circulas={}
+circulas[circulas]=circulas
