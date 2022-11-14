@@ -11,35 +11,35 @@ function dogYears(name,age){
     switch(name){
         case 'earth':
             dogAge=age*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'mercury':
             dogAge=age*merc*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'venus':
             dogAge=age*ven*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'mars':
             dogAge=age*mars*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'jupiter':
             dogAge=age*jupiter*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'saturn':
             dogAge=age*saturn*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'uranus':
             dogAge=age*uranus*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         case 'neptune':
             dogAge=age*neptune*7/second;
-            return dogAge.toFixed(2);
+            return Math.round(dogAge*100)/100;
             break;
         default:
             break;
