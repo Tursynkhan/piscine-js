@@ -3,7 +3,7 @@ function sign(a){
         return 1
     }else if(a<0){
         return -1
-    }else{
+    }else if (a===0){
         return 0
     }
 }
