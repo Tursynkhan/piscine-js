@@ -1,3 +1,3 @@
-function concatStr(a,b){
-    return a+b
+function concatStr(a ,b ){
+    return "a"+"b"
 }
