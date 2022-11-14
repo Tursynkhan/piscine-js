@@ -1,2 +1,2 @@
 let circulas={}
-circulas[circulas]=circulas
+circulas['circulas']=circulas
