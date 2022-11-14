@@ -32,5 +32,3 @@ function deepFreeze(object) {
 Object.freeze(obj);
 Object.freeze(arr);
 deepFreeze(nested)
-nested.obj.str="heelo"
-console.log(nested)
