@@ -5,5 +5,8 @@ function last(arr){
     return arr[arr.length-1]
 }
 function kiss(arr){
-    return arr[0]+arr[arr.length-1]
+    let arr2 =[]
+    arr2.push(arr[arr.length-1])
+    arr2.push(arr[0])
+    return arr2
 }
