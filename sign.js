@@ -7,3 +7,9 @@ function sign(a){
         return 0
     }
 }
+function sameSign(a,b){
+    if(sign(a)===sign(b)){
+        return true
+    } 
+    return false
+}
