@@ -1,8 +1,4 @@
-const person = {
-    name: 'Rick',
-    age: 77,
-    country: 'US',
-  }
+
   let clone1={}
   let clone2={}
 
