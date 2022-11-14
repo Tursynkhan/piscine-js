@@ -1,3 +1,5 @@
 function concatStr(a ,b ){
-    return "a"+"b"
+    let str =""
+    return str.concat(a,b)
 }
+console.log(concatStr('a','b'))
