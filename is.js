@@ -52,13 +52,13 @@ is.fun=function (f){
     return false
 }
 is.truthy=function (truthy){
-    if (truthy===true){
+    if (truthy){
         return true
     }
     return false
 }
 is.falsy=function (falsy){
-    if (truthy){
+    if (!falsy){
         return true
     }
     return false
