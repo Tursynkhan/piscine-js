@@ -1,7 +1,22 @@
+const is = {
+    num,
+    nan,
+    str,
+    bool,
+    undef,
+    def,
+    arr,
+    obj,
+    fun,
+    truthy,
+    falsy,
+}
 
 function num(n){
     if (typeof(n)==="number"){
         return true
+    }else if(typeof(n)==='undefined'){
+        return false
     }
     return false
     
