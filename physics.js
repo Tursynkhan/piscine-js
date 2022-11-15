@@ -6,7 +6,7 @@ function getAcceleration(obj){
         return obj.f/obj.m
     }else if (typeof(obj.t)==='number' && typeof(obj.d)==='number'){
 
-        return (obj.d*2)/obj.t*obj.t
+        return 2*(obj.d)/(obj.t*obj.t)
     }
     return "impossible"
 }
