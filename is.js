@@ -1,4 +1,3 @@
-
 is.num=function (n){
 
     return typeof(n)==='number'
