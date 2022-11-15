@@ -7,11 +7,13 @@ const obj={
     d
 }
 function getAcceleration(obj){
-    if (obj.m<0 || obj.t<0 || obj.Δt<0){
+    if (obj.Δv==='undefined' && obj.j==='undefined' && obj.d==='undefined' && obj.t==='undefined') {
+        return a=obj.f/obj.m;
+    }else if (obj.f==='undefined' & obj.m==='undefined' && obj.d==='undefined' && obj.t==='undefined'){
+        return a=obj.Δv/obj.Δt;
+    }else if (obj.f==='undefined' || obj.m==='undefined' && obj.Δv==='undefined' && obj.j==='undefined'){
 
+        return a=(obj.d*2)/obj.t*obj.t
     }
-    a=obj.f/obj.m;
-    a=obj.Δv/obj.Δt;
-    a=(obj.d*2)/obj.t*obj.t
-    return a
+    return "impossible"
 }
