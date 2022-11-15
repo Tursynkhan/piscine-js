@@ -34,10 +34,8 @@ is.def=function (def){
     return false
 }
 is.arr=function (arr){
-    if (isArray(arr)){
-        return true
-    }
-    return false
+    return Array.isArray(arr)
+   
 }
 is.obj=function (obj){
     if (typeof(obj)==='object'){
