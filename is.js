@@ -37,6 +37,13 @@ is.arr=function (arr){
     if (typeof(arr)==='object'){
         return true
     }
+    for (let i=0;i<arr.length;i++){
+        
+        if (typeof(arr)==='object'){
+            return true
+        }
+        return false
+    }
     return false
 }
 is.obj=function (obj){
@@ -63,7 +70,3 @@ is.falsy=function (falsy){
     }
     return true
 }
-// test #1 failed:
-// (_) => match(_, is.num, [0, NaN])
-
-// TypeError: undefined is not a function
