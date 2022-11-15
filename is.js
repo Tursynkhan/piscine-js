@@ -34,7 +34,7 @@ is.def=function (def){
     return false
 }
 is.arr=function (arr){
-    return arr instanceof Array
+    return arr===Array
    
 }
 is.obj=function (obj){
