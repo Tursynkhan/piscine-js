@@ -58,8 +58,8 @@ is.truthy=function (truthy){
     return false
 }
 is.falsy=function (falsy){
-    if (falsy===false && typeof(falsy)==='undefined' && typeof(falsy)===null ){
-        return false
+    if (!falsy){
+        return true
     }
-    return true
+    return false
 }
