@@ -58,7 +58,7 @@ is.truthy=function (truthy){
     return false
 }
 is.falsy=function (falsy){
-    if (falsy===false){
+    if (falsy===false && falsy!==null && falsy!=='undefined'){
         return false
     }
     return true
