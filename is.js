@@ -1,9 +1,7 @@
 
 function num(n){
-    if (typeof(n)==="number"){
+    if (typeof(n)==='number'){
         return true
-    }else if(typeof(n)==='undefined'){
-        return false
     }
     return false
     
@@ -68,3 +66,7 @@ function falsy(falsy){
     }
     return true
 }
+// test #1 failed:
+// (_) => match(_, is.num, [0, NaN])
+
+// TypeError: undefined is not a function
