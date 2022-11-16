@@ -28,10 +28,12 @@ function setToStr(set){
     return str
 }
 function strToArr(str){
-    return str.split('')
+    const arr= str.split('')
+    return new Set(arr)
 }
 function strToSet(str){
-    return [...new Set(str)]
+    const arr=str.split('')
+    return new Set(arr)
 }
 function mapToObj(map){
     return Object.fromEntries(map)
