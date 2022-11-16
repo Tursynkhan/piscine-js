@@ -39,34 +39,29 @@ function strToObj(str){
     return Object.assign({},arr)
 }
 function superTypeOf(type){
-    if(Object.getPrototypeOf(type)===Map.prototype){
-        return 'Map'
+    
+    if (type===null){
+        return 'null'
     }
-    else if (Object.getPrototypeOf(type)===Set.prototype){
-        return 'Set'
+    if (typeof(type)==='undefined'){
+        return 'undefined'
     }
-    else if (typeof(type)==='string'){
-        return 'String'
-    }
-    else if (typeof(type)=== 'object' && !Array.isArray(type) && typeof(type) !== null){
+    if(typeof(type) === 'object'){
+        if (Array.isArray(type)){
+            return 'Array'
+        }
+        if (type instanceof Map){
+            return "Map"
+        }
+        if (type instanceof Set){
+            return "Set"
+        }
         return 'Object'
     }
-    else if (typeof(type)==='number'){
-        return 'Number'
+    if(typeof(type)){
+        const s=typeof(type)
+        return s.charAt(0).toUpperCase()+s.slice(1).toLowerCase()
     }
-    else if (typeof(type)===NaN){
-        return 'Number'
-    }
-    else if (Array.isArray(type)){
-        return 'Array'
-    }
-    else if (typeof(type)==='undefined'){
-        return 'Undefined'
-    }
-    else if (typeof(type)==='function'){
-        return 'Function'
-    }
-    else if (!type){
-        return 'null'
-    }  
+
 }
+
