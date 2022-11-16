@@ -66,7 +66,7 @@ function superTypeOf(type){
     else if (typeof(type)==='function'){
         return 'Function'
     }
-    else if (type===null){
+    else if (!type){
         return 'null'
-    }
+    }  
 }
