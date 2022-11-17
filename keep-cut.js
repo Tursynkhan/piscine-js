@@ -32,11 +32,11 @@ function keepFirst(str){
 }
 function keepLast(str){
     let res=''
-    let n=str.length
-    if (n===1){
+    
+    if (str.length==1){
         return str
     }
-    for (let i=n-1;i>n-3;i--){
+    for (let i=str.length-1;i>str.length-3;i--){
         
         res=str[i]+res
     }
@@ -46,7 +46,7 @@ function keepFirstLast(str){
     let res1=''
     let res2=''
     let res=''
-    let n=str.length
+    
    if (str.length>3){
     for (let i=0;i<str.length;i++){
         if (i==2){
@@ -54,7 +54,7 @@ function keepFirstLast(str){
         }
         res1+=str[i]
     }
-    for (let i=n-1;i>n-3;i--){
+    for (let i=str.length-1;i>str.length-3;i--){
         
         res2=str[i]+res2
     }
@@ -64,4 +64,4 @@ function keepFirstLast(str){
    }
    return  res
 }
-console.log(keepFirstLast('yoafdyo'))
+console.log(cutFirstLast('abcdef'))
