@@ -14,8 +14,8 @@ function cutLast(str){
 }
 function cutFirstLast(str){
     let res=''
-    n=str.length
-    for (let i=2;i<n-2;i++){
+    
+    for (let i=2;i<str.length-2;i++){
         res+=str[i]
     }
     return res
