@@ -67,6 +67,7 @@ function modulo(a,b){
         a=Number(a.slice(1))
         b=String(b)
         b=Number(b.slice(1))
+        flag=true
     }
     if (a<0 ){
         a=String(a)
@@ -75,7 +76,6 @@ function modulo(a,b){
     }else if(b<0){
         b=String(b)
         b=Number(b.slice(1))
-        flag=true
     }
     
     while(b<a){
@@ -89,4 +89,3 @@ function modulo(a,b){
     }
    
 }
-console.log(modulo(123,-22))
