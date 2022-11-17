@@ -33,11 +33,7 @@ function divide(a,b){
             count++
         }
     }else{
-        let r=b;
-        while(r>=a){
-            r=r-a;
-            count++
-        }
+       return 0
     }
     return count;
 }
