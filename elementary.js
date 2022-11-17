@@ -26,16 +26,32 @@ function multiply(a,b){
 }
 function divide(a,b){
     let count=0;
-    let r=a;
-    while(r>=b){
-        r=r-b;
-        count++
+    if (a>b){
+        let r=a;
+        while(r>=b){
+            r=r-b;
+            count++
+        }
+    }else{
+        let r=b;
+        while(r>=a){
+            r=r-a;
+            count++
+        }
     }
     return count;
 }
 function modulo(a,b){
-    while(b<a){
-        a=a-b
+    if (a>b){
+        while(b<a){
+            a=a-b
+        }
+        return a
+    }else{
+        while(a<b){
+            b=b-a
+        }
+        return b
     }
-    return a
+   
 }
