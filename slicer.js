@@ -1,76 +1,58 @@
 function slice(str,start,end){
+    let res=[]
     if (typeof(str)==='string'){
-        let resStr=''
-        if (typeof(start)==='undefined'){
-            start=0
-        }
-        if (start<0){
-            start=-start
-             if (end<0){
-                end=-end
-                for (let i=start;i<str.length-end;i++){
-                    resStr+=str[i]
-                }
-                return resStr
-            }
-            for (let i=str.length-1;i>start+1;i--){
-                resStr=str[i]+resStr
-            
-            }
-            return resStr
-        }else{
-            if (end<0){
-                end=-end
-                for (let i=start;i<str.length-end;i++){
-                    resStr+=str[i]
-                }
-                return resStr
-            }
-            for (let i=start;i<str.length;i++){
-                if (i==end){
-                    break
-                }
-                resStr+=str[i]
-            }
-            return resStr
-        }
+        res=''
     }
-    if (typeof(str)==='object'){
-
-        let resArr=[]
-        if (typeof(start)==='undefined'){
-            start=0
+    if (typeof(start)==='undefined'){
+        start=0
+    }
+    if (start<0){
+        start=-start
+        if (end<0){
+            end=-end
+            for (let i=start;i<str.length-end;i++){
+                if (typeof(str)==='string'){
+                    res+=str[i]
+                }else{
+                    res.push(str[i])
+                }
+                
+            }
+            return res
         }
-        if (start<0){
-            start=-start
-            if (end<0){
-                end=-end
-                for (let i=start;i<str.length-end;i++){
-                    resArr.push(str[i])
-                }
-                return resArr
+        for (let i=str.length-1;i>start+1;i--){
+            
+            if (typeof(str)==='string'){
+                res=str[i]+res
+            }else{
+                res.push(str[i])
+                res.reverse();
             }
-            for (let i=str.length-1;i>start+1;i--){
-                resArr.push(str[i]);
-                resArr.reverse();
-            }
-            return resArr
-        }else{
-            if (end<0){
-                end=-end
-                for (let i=start;i<str.length-end;i++){
-                    resArr.push(str[i])
-                }
-                return resArr
-            }
-            for (let i=start;i<str.length;i++){
-                if (i==end){
-                    break
-                }
-                resArr.push(str[i])
-            }
-            return resArr
         }
+        return res
+    }else{
+        if (end<0){
+            end=-end
+            for (let i=start;i<str.length-end;i++){
+                if (typeof(str)==='string'){
+                    res+=str[i]
+                }else{
+                    res.push(str[i])
+                }
+            }
+            return res
+        }
+        for (let i=start;i<str.length;i++){
+            if (i==end){
+                break
+            }
+            if (typeof(str)==='string'){
+                res+=str[i]
+            }else{
+                res.push(str[i])
+            }
+        }
+        return res
     }
 }
 
