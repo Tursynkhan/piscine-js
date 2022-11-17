@@ -20,7 +20,7 @@ function multiply(a,b){
         res+=a
     }
     if (flag){
-        res=res*-1
+        res=Number('-'+res)
     }
     return res
 }
