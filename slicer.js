@@ -13,7 +13,7 @@ function slice(str,start,end){
                 }
                 return resStr
             }
-            for (let i=str.length-1;i>start;i--){
+            for (let i=str.length-1;i>start+1;i--){
                 resStr=str[i]+resStr
             
             }
@@ -50,7 +50,7 @@ function slice(str,start,end){
                 }
                 return resArr
             }
-            for (let i=str.length-1;i>start;i--){
+            for (let i=str.length-1;i>start+1;i--){
                 resArr.push(str[i]);
                 resArr.reverse();
             }
@@ -58,7 +58,7 @@ function slice(str,start,end){
         }else{
             if (end<0){
                 end=-end
-                for (let i=start;i<str.length-end-1;i++){
+                for (let i=start;i<str.length-end;i++){
                     resArr.push(str[i])
                 }
                 return resArr
@@ -74,3 +74,17 @@ function slice(str,start,end){
     }
 }
 
+console.log(slice('abcdef', 2) );
+console.log(slice('abcdef', -2));
+console.log(slice('abcdef', 0, 2));
+console.log(slice('abcdef', 0, -2) );
+console.log(slice('abcdef', 2, 4));
+console.log(slice('abcdef', -3, -1));
+
+// handle Array
+console.log(slice([1, 2, 3, 4, 5, 6], 2));
+console.log(slice([1, 2, 3, 4, 5, 6], -2));
+console.log(slice([1, 2, 3, 4, 5, 6], 0, 2));
+console.log(slice([1, 2, 3, 4, 5, 6], 0, -2));
+console.log(slice([1, 2, 3, 4, 5, 6], 2, 4));
+console.log(slice([1, 2, 3, 4, 5, 6], -3, -1));
