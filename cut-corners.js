@@ -1,4 +1,9 @@
 function round(n){
+    if (n===Infinity){
+        return Infinity
+    }else if (n===-Infinity){
+        return -Infinity
+    }
     let flag=false;
     if (n<0){
         n=-n
@@ -17,6 +22,11 @@ function round(n){
     return n
 }
 function floor(n){
+    if (n===Infinity){
+        return Infinity
+    }else if (n===-Infinity){
+        return -Infinity
+    }
     let flag=false;
     if (n<0){
         n=-n
@@ -38,6 +48,11 @@ function floor(n){
     return n
 }
 function ceil(n){
+    if (n===Infinity){
+        return Infinity
+    }else if (n===-Infinity){
+        return -Infinity
+    }
     let flag=false;
     if (n<0){
         n=-n
@@ -59,6 +74,11 @@ function ceil(n){
     return n
 }
 function trunc(n){
+    if (n===Infinity){
+        return Infinity
+    }else if (n===-Infinity){
+        return -Infinity
+    }
     let flag=false;
     if (n<0){
         n=-n
