@@ -20,11 +20,17 @@ function floor(n){
     let flag=false;
     if (n<0){
         n=-n
+        n=n*10
         flag=true
-    }
-    n=n*10
-    if (modulo(n)>=0 && modulo(n)<10){
-        n=(n-modulo(n))/10
+        if (modulo(n)>=0 && modulo(n)<10){
+            n=(n-modulo(n))/10
+            n=n+1
+        }
+    }else if (n>10){
+        n=n*10
+        if (modulo(n)>=0 && modulo(n)<10){
+            n=(n-modulo(n))/10
+        }
     }
     if (flag){
         n=-n
@@ -88,3 +94,4 @@ function modulo(a,b){
         return a=-a
     }
 }
+console.log(floor(-5.05))
