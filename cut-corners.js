@@ -1,5 +1,5 @@
 function round(n){
-    if (n===Infinity){
+    if ( n===Infinity){
         return Infinity
     }else if (n===-Infinity){
         return -Infinity
