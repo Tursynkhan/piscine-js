@@ -25,7 +25,6 @@ function floor(n){
     n=n*10
     if (modulo(n)>=0 && modulo(n)<10){
         n=(n-modulo(n))/10
-        n=n+1
     }
     if (flag){
         n=-n
@@ -41,6 +40,7 @@ function ceil(n){
     n=n*10
     if (modulo(n)>=0 && modulo(n)<10){
         n=(n-modulo(n))/10
+        n=n+1
     }
     if (flag){
         n=-n
