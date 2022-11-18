@@ -1,121 +1,118 @@
 function round(n){
-    if ( n===Infinity){
-        return Infinity
-    }else if (n===-Infinity){
-        return -Infinity
-    }
-    let flag=false;
+    let res
+    let check = false
+    let remainder
     if (n<0){
         n=-n
-        flag=true
+        check=true
     }
-    n=n*10
-    if (modulo(n)>=5 && modulo(n)<10){
-        n=(n-modulo(n))/10
-        n=n+1
-    }else if(modulo(n)>=0 && modulo(n)<=4){
-        n=(n-modulo(n))/10
+    remainder = modulo(n,1)
+    if (remainder>=0.5){
+        res = n - remainder + 1
+    }else {
+        res = n - remainder
     }
-    if (flag){
-        n=-n
+    if (check){
+        res = -res
     }
-    return n
+    return res
 }
-function floor(n){
-    if (n===Infinity){
-        return Infinity
-    }else if (n===-Infinity){
-        return -Infinity
-    }
-    let flag=false;
-    if (n<0){
-        n=-n
-        n=n*10
-        flag=true
-        if (modulo(n)>=0 && modulo(n)<10){
-            n=(n-modulo(n))/10
-            n=n+1
-        }
-    }else if (n>0){
-        n=n*10
-        if (modulo(n)>=0 && modulo(n)<10){
-            n=(n-modulo(n))/10
-        }
-    }
-    if (flag){
-        n=-n
-    }
-    return n
-}
+
 function ceil(n){
-    if (n===Infinity){
-        return Infinity
-    }else if (n===-Infinity){
-        return -Infinity
-    }
-    let flag=false;
-    if (n<0){
-        n=-n
-        n=n*10
-        flag=true
-        if (modulo(n)>=0 && modulo(n)<10){
-            n=(n-modulo(n))/10
-        }
-    }else if (n>0){
-        n=n*10
-        if (modulo(n)>=0 && modulo(n)<10){
-            n=(n-modulo(n))/10
-            n=n+1
+
+    let res
+    let remainder
+
+
+    remainder = modulo(n,1)
+    if (n>0 && remainder!=0){
+        res = n - remainder +1
+    }else if (remainder == 0){
+        return n
+    }else{
+        res = n - remainder
+        if (res == remainder){
+            return -0
         }
     }
-    if (flag){
-        n=-n
+    if (n<0 && res>=0){
+        return -res
     }
-    return n
-}
-function trunc(n){
-    if (n===Infinity){
-        return Infinity
-    }else if (n===-Infinity){
-        return -Infinity
-    }
-    let flag=false;
-    if (n<0){
-        n=-n
-        flag=true
-    }
-    n=n*10
-    if (modulo(n)>=0 && modulo(n)<10){
-        n=(n-modulo(n))/10
-    }
-    if (flag){
-        n=-n
-    }
-    return n
+
+ 
+    return res
 
 }
+
+function floor(n){
+    let res
+    let remainder
+    remainder = modulo(n,1)
+    if (n>0 && remainder!=0){
+        res = n - remainder
+    }else if (remainder ===0){
+        return n
+    }else{
+        res = n - 1 - remainder
+    }
+    return round(res)
+} 
+
+function trunc(n){
+    var res = parse(modulo(n,10000))
+    var res2 = parse(n/10000)
+    return res2*10000+res
+}
+function parse(num){
+    return num^0
+}
+
+function multiply(a,b){
+    let check = false
+    let res = 0
+    if (b<0){
+        b=-b
+        check = true
+    }
+    while (b>0){
+        res += a
+        b--
+    }
+    if (check){
+        res = -res 
+    }
+    return res
+
+}
+
+function divide(a,b){
+    let check = false
+    let count = 0
+    if (b<0 && a<0){
+        b=-b
+        a=-a
+    }
+    if (a<0){
+        a=-a
+        check=true
+    }
+    if (b<0){
+        b=-b
+        check=true
+    }
+   let c = a
+   while (c>b){
+    c-=b
+    count++
+   }
+    if (check){
+        count=-count
+    }
+    return count
+}
+
 function modulo(a,b){
-    let flag=false
-    b=10
-    if (a<0 && b<0){
-        a=-a
-        b=-b
-        flag=true
-    }
-    if (a<0 ){
-        a=-a
-        flag=true
-    }else if(b<0){
-        b=-b
-    }
-    
-    while(b<a){
-          a=a-b
-    }
-    if (!flag){
-       return a
-    }
-    if (flag){
-        return a=-a
-    }
+    let n = divide(a,b)
+    let t = multiply(n,b)
+    return a-t
 }
