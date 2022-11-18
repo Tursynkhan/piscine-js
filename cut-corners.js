@@ -5,7 +5,7 @@ function round(n){
         flag=true
     }
     n=n*10
-    if (modulo(n)>=5 && modulo(n)<=9){
+    if (modulo(n)>=5 && modulo(n)<10){
         n=(n-modulo(n))/10
         n=n+1
     }else if(modulo(n)>=0 && modulo(n)<=4){
@@ -23,7 +23,7 @@ function floor(n){
         flag=true
     }
     n=n*10
-    if (modulo(n)>=0 && modulo(n)<=9){
+    if (modulo(n)>=0 && modulo(n)<10){
         n=(n-modulo(n))/10
         n=n+1
     }
@@ -39,7 +39,7 @@ function ceil(n){
         flag=true
     }
     n=n*10
-    if (modulo(n)>=0 && modulo(n)<=9){
+    if (modulo(n)>=0 && modulo(n)<10){
         n=(n-modulo(n))/10
     }
     if (flag){
@@ -54,7 +54,7 @@ function trunc(n){
         flag=true
     }
     n=n*10
-    if (modulo(n)>=0 && modulo(n)<=9){
+    if (modulo(n)>=0 && modulo(n)<10){
         n=(n-modulo(n))/10
     }
     if (flag){
