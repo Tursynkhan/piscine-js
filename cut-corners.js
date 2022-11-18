@@ -85,6 +85,6 @@ function modulo(a,b){
        return a
     }
     if (flag){
-        return a=Number('-'+a)
+        return a=-a
     }
 }
