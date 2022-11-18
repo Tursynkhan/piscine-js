@@ -41,12 +41,17 @@ function ceil(n){
     let flag=false;
     if (n<0){
         n=-n
+        n=n*10
         flag=true
-    }
-    n=n*10
-    if (modulo(n)>=0 && modulo(n)<10){
-        n=(n-modulo(n))/10
-        n=n+1
+        if (modulo(n)>=0 && modulo(n)<10){
+            n=(n-modulo(n))/10
+        }
+    }else if (n>0){
+        n=n*10
+        if (modulo(n)>=0 && modulo(n)<10){
+            n=(n-modulo(n))/10
+            n=n+1
+        }
     }
     if (flag){
         n=-n
