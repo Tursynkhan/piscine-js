@@ -1,14 +1,11 @@
-function triangle(str,int){
-    let res = ''
-    for(let i = 1;i<=int;i++){
-        for(let j = 0;j<i;j++){
-            res += str
+function triangle(str,n){
+    let res=''
+    for (let i=1;i<=n;i++){
+        for(let j=1;j<=i;j++){
+            res+=str
         }
-        if(i === int){
-            return res
-        }
-        res += '\n'
+        res+='\n'
     }
-    return res
+    return res.slice(0,res.length-1)
 }
-console.log(triangle('*',8))
+console.log(triangle('*',5))
