@@ -12,7 +12,7 @@ function nasa(N){
             str+=String(i)+' '
         }
     }
-    str.slice(0,str.length)
+    str=str.slice(0,str.length-1)
     return str
 }
 console.log(nasa(15))
