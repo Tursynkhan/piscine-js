@@ -8,7 +8,8 @@ function get(src, path){
             res = src[arrPath[i]]
         }
     }
-    console.log(res)
+    return res
+    // console.log(res)
 }
 // const get = (src, path) => {
 //     let pathArr = path.split('.')
