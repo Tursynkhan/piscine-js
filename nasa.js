@@ -1,16 +1,18 @@
-function nasa(x){
-    let res = ''
-    for(let i = 1;i<=x;i++){
-        if(i%3 ===0 && i%5 ===0){
-            res += 'NASA' + ' '
-        }else if(i%3 === 0 && i%5 != 0){
-            res += 'NA'+' '
-        }else if(i%3 != 0 && i%5 === 0){
-            res += 'SA'+ ' '
+function nasa(N){
+    let str=''
+    for (let i=1;i<=N;i++){
+        if (i%3==0 && i%5==0){
+            str+='NASA'+' '
+        }else if (i%3==0){
+            str+='NA'+ ' '
+        }else if (i%5==0){
+            str+='SA'+' '
         }else{
-            res += String(i)+' '
-        }   
+
+            str+=String(i)+' '
+        }
     }
-    res = res.slice(0,res.length-1)
-    return res
+    str.slice(0,str.length)
+    return str
 }
+console.log(nasa(15))
