@@ -1,5 +1,9 @@
 function isValid(d){
-    return d instanceof Date && !isNaN(d)
+    if(isNaN(date)|| date == 0){
+        return false
+    }else{
+        return true
+    }
 }
 function isAfter(date1,date2){
     let d1=date1.getTime()
@@ -35,3 +39,4 @@ function isPast(date){
         return false
     }
 }
+console.log(isValid(Date.now()))
