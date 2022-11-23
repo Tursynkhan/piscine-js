@@ -24,11 +24,3 @@ function tempForecasts(arr){
     });
     return str
 }
-console.log(tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' 101 °F',
-      state: 'california',
-      region: 'West',
-    },
-  ]))
