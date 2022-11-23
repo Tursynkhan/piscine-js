@@ -2,7 +2,20 @@ function citiesOnly(arr){
     return arr.map((key)=>key.city)
 }
 function upperCasingStates(arr){
-    return arr.map((key)=>key.charAt(0).toUpperCase()+key.slice(1).toLowerCase())
+    let array = cities.map(function city (currentValue){
+        const regex = /^\w/g
+        const regexSpace = /\s\w/g
+        const regexSp = new RegExp(regexSpace)
+        const regexSt = new RegExp(regex)
+        let res1 = currentValue.match(regexSt)
+        let res2 = currentValue.match(regexSp)
+        let res = currentValue.replace(regexSt,res1[0].toUpperCase())
+        if(res2!== null){
+            res = res.replace(regexSp,res2[0].toUpperCase())
+        }
+            return res
+        })
+        return array
 }
 function fahrenheitToCelsius(arr){
     return arr.map(key=>Math.round(((parseInt(key)-32)*5)/9)+'°C')
