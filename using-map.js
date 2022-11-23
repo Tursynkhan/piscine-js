@@ -1,7 +1,7 @@
 function citiesOnly(arr){
     return arr.map((key)=>key.city)
 }
-function upperCasingStates(arr){
+function upperCasingStates(array){
     let array = cities.map(function city (currentValue){
         const regex = /^\w/g
         const regexSpace = /\s\w/g
