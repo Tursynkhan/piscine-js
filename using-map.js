@@ -2,7 +2,15 @@ function citiesOnly(arr){
     return arr.map((key)=>key.city)
 }
 function upperCasingStates(arr){
-    return arr.map((key)=>key.charAt(0).toUpperCase()+key.slice(1).toLowerCase())
+    const temp=arr.map(key=>{
+        const arr2=key.split(" ");
+        for (let i=0;i<arr2.length;i++){
+            arr2[i]=arr2[i].charAt(0).toUpperCase()+arr2[i].slice(1);
+        }
+        const str2=arr2.join(" ");
+        return str2
+    });
+    return temp
 }
 function fahrenheitToCelsius(arr){
     return arr.map(key=>Math.round(((parseInt(key)-32)*5)/9)+'°C')
@@ -19,7 +27,11 @@ function tempForecasts(arr){
     const str=arr.map((all)=>{
         let temp=Math.round(((parseInt(all.temperature)-32)*5)/9)+'°Celsius';
         let city=all.city;
-        let state=all.state.charAt(0).toUpperCase()+all.state.slice(1).toLowerCase()
+        const arr2=all.state.split(" ");
+        for (let i=0;i<arr2.length;i++){
+            arr2[i]=arr2[i].charAt(0).toUpperCase()+arr2[i].slice(1);
+        }
+        const state=arr2.join(" ");
         return temp+' in '+city+', '+state
     });
     return str
