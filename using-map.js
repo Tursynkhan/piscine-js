@@ -17,8 +17,8 @@ function fahrenheitToCelsius(arr){
 }
 function trimTemp(arr) {
     const temp = arr.map((key) =>{
-        key.temperature=key.temperature.trim();
-        return key;
+        key.temperature = key.temperature.replace(/ /g, '');
+        return key
     });
     return temp
 }
