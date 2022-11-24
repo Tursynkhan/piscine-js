@@ -13,7 +13,7 @@ function upperCasingStates(arr){
     return temp
 }
 function fahrenheitToCelsius(arr){
-    return arr.map(key=>Math.round(((parseInt(key)-32)*5)/9)+'°C')
+    return arr.map(key=>Math.floor(((parseInt(key)-32)*5)/9)+'°C')
 }
 function trimTemp(arr) {
     const temp = arr.map((key) =>{
@@ -25,7 +25,7 @@ function trimTemp(arr) {
 
 function tempForecasts(arr){
     const str=arr.map((all)=>{
-        let temp=Math.round(((parseInt(all.temperature)-32)*5)/9)+'°Celsius';
+        let temp=Math.floor(((parseInt(all.temperature)-32)*5)/9)+'°Celsius';
         let city=all.city;
         const arr2=all.state.split(" ");
         for (let i=0;i<arr2.length;i++){
