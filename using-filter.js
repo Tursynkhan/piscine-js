@@ -62,7 +62,7 @@ function multiFilter(arr){
         if(word.capital.length>=8){
             flagCapital = true
         }
-        let vowels=['a','e','o','i','u','y','A','E','O','I','U','Y']
+        let vowels=['a','e','o','i','u','y','A','E','O','I','U']
         let name=word.name
         for (let i=0;i<vowels.length;i++){
             if (name[0]===vowels[i]){
@@ -91,55 +91,3 @@ function multiFilter(arr){
     });
     return result
 }
-console.log(filter1DistinctVowel([
-    'Alabama',
-    'Alaska',
-    'Arizona',
-    'Arkansas',
-    'California',
-    'Colorado',
-    'Connecticut',
-    'Delaware',
-    'Florida',
-    'Georgia',
-    'Hawaii',
-    'Idaho',
-    'Illinois',
-    'Indiana',
-    'Iowa',
-    'Kansas',
-    'Kentucky',
-    'Louisiana',
-    'Maine',
-    'Maryland',
-    'Massachusetts',
-    'Michigan',
-    'Minnesota',
-    'Mississippi',
-    'Missouri',
-    'Montana',
-    'Nebraska',
-    'Nevada',
-    'New Hampshire',
-    'New Jersey',
-    'New Mexico',
-    'New York',
-    'North Carolina',
-    'North Dakota',
-    'Ohio',
-    'Oklahoma',
-    'Oregon',
-    'Pennsylvania',
-    'Rhode Island',
-    'South Carolina',
-    'South Dakota',
-    'Tennessee',
-    'Texas',
-    'Utah',
-    'Vermont',
-    'Virginia',
-    'Washington',
-    'West Virginia',
-    'Wisconsin',
-    'Wyoming',
-  ]))
