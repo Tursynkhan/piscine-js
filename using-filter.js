@@ -16,7 +16,7 @@ function filterStartVowel(arr){
 function filter5Vowels(arr){
     const result=arr.filter(word=>{
         let count=0;
-        let vowels=['a','A','e','E','o','O','i','I','u','U','y','Y'];
+        let vowels=['a','e','i','o','u'];
         for (let  i=0;i<word.length;i++){
                 for (let j=0;j<vowels.length;j++){
                 if (word[i]==vowels[j]){
