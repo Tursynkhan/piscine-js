@@ -14,18 +14,21 @@ function getArchitects(){
 }
   
 function getClassical(){
-    let arr1=Array.from(document.getElementsByClassName('classical'))
-    let arr2=Array.from(document.querySelectorAll('arr1:not(.classical)'))
+    let arr1=Array.from(document.querySelectorAll('.classical'))
+    let arr2=Array.from(document.querySelectorAll(':not(.classical)'))
     return [arr1,arr2]
 }
 function getActive(){
     let arr1=Array.from(document.getElementsByClassName('active'))
-    let arr2=Array.from(document.querySelectorAll('arr1:not(.active)')) 
+    let arr2=Array.from(document.querySelectorAll(':not(.active)')) 
     return [arr1,arr2]
 }
  
 function getBonannoPisano(){
-    let arr1=Array.from(document.getElementById('BonannoPisano'))
-    let arr2=Array.from(document.querySelectorAll('arr1:not(#BonannoPisano))'))
-    return [arr1,arr2]
+   let arr = []
+    let res = document.getElementById("BonannoPisano")
+    let res1 = Array.from(document.querySelectorAll('a:not(#BonannoPisano)'))
+    arr.push(res)
+    arr.push(res1)
+    return arr
 }
