@@ -1,8 +1,10 @@
 function pick(obj,keys){
     const newObj={}
     for (let key in obj){
-        if (keys==key){
-            newObj[key]=obj[key]
+        for (let i=0;i<keys.length;i++){
+            if (keys[i]==key){
+                newObj[key]=obj[key]
+            }
         }
     }
     return newObj
@@ -10,8 +12,10 @@ function pick(obj,keys){
 function omit(obj,keys){
     const newObj={}
     for (let key in obj){
-        if (keys!=key){
-            newObj[key]=obj[key]
+        for (let i=0;i<keys.length;i++){
+            if (keys[i]!=key){
+                newObj[key]=obj[key]
+            }
         }
     }
     return newObj
