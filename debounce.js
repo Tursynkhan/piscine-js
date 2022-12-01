@@ -11,7 +11,7 @@ const debounce = (func,delay)=>{
     }
 }
 const opDebounce=(func,delay,options)=>{
-    const leading =(options,leading) ? true : false
+    const leading =(options.leading) ? true : false
     let timeout=null
     let cooldown=false
     return (...args)=>{
