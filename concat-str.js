@@ -1,4 +1,5 @@
-const concatStr=(a,b)=> {
- return a+b
+let concatStr =(a,b)=>{
+    let result=""
+    return result.concat(a,b)
+    
 }
-console.log(concatStr("ab","c"))
