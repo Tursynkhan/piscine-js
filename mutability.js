@@ -14,5 +14,5 @@ for (let key in person){
 for (let key in person){
   clone2[key]=person[key];
 }
-
-
+person.age=78
+person.country='FR'
