@@ -1,10 +1,14 @@
 const pyramid=(sep,n)=>{
     let res=''
     for (let i=1;i<=n;i++){
-        for(let j=1;j<=n*2-1;j++){
-            if(j>n-i && j<=n-1+i){
+        for(let j=1;j<=n-1+i;j++){
+            if(j>n-i){
                 res+=sep
-            }else{
+            }else if(sep.length==3){
+                res+='   '
+            }else if (sep.length==2){
+                res+='  '
+            }else if (sep.length==1){
                 res+=' '
             }
         }
@@ -13,4 +17,4 @@ const pyramid=(sep,n)=>{
     return res.slice(0,res.length-1)
 }
 
-console.log(pyramid('a',5))
+console.log(pyramid('<^>',13))
