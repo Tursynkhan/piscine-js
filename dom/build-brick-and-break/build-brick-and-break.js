@@ -29,3 +29,18 @@ function destroy(){
     let element=document.getElementsByTagName('div')
     element[element.length-1].remove()
 }
+// export function repair(...ids) {
+//     for (let i = 0; i < ids.length; i++) {
+//         let elem = document.getElementById(ids[i])
+//         // console.log(elem.getAttribute("foundation"))
+//         let n = ids[i].replace('brick-', '')
+//         if(n%3===2){
+//             elem.setAttribute('data-repaired',"in progress")
+//             elem.innerHTML = n
+//         }else{
+//             elem.setAttribute("data-repaired","true")
+//             elem.innerHTML = n
+//         }
+//         // console.log(Number(ids[i]))
+//     }
+// }
