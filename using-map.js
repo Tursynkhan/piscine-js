@@ -1,5 +1,5 @@
-const citiesOnly=(arr)=>{
-   return arr.map(x=>x.city)
+function citiesOnly(arr){
+    return arr.map((key)=>key.city)
 }
 function upperCasingStates(arr){
     const temp=arr.map(key=>{
@@ -12,22 +12,15 @@ function upperCasingStates(arr){
     });
     return temp
 }
-
-const fahrenheitToCelsius=(arr)=>{
-    return arr.map((val)=>{
-        const el=val.split('°F')
-        const cel=((el[0]-32)*5)/9
-        return (Math.round(cel)+'°F')
-    })
+function fahrenheitToCelsius(arr){
+    return arr.map(key=>Math.floor(((parseInt(key)-32)*5)/9)+'°C')
 }
-
-const trimTemp=(arr)=>{
-    return arr.map(obj=>{
-        return {
-            city:obj.city,
-            temperature:obj.temperature.replace(/\s/g, ''),
-        }
-    })
+function trimTemp(arr) {
+    const temp = arr.map((key) =>{
+        key.temperature = key.temperature.replace(/ /g, '');
+        return key
+    });
+    return temp
 }
 
 function tempForecasts(arr){
@@ -43,4 +36,3 @@ function tempForecasts(arr){
     });
     return str
 }
-
