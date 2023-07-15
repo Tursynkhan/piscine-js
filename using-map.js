@@ -1,8 +1,16 @@
 const citiesOnly=(arr)=>{
    return arr.map(x=>x.city)
 }
-const upperCasingStates=(arr)=>{
-   return arr.map(val=>val.charAt(0).toUpperCase()+val.slice(1))
+function upperCasingStates(arr){
+    const temp=arr.map(key=>{
+        const arr2=key.split(" ");
+        for (let i=0;i<arr2.length;i++){
+            arr2[i]=arr2[i].charAt(0).toUpperCase()+arr2[i].slice(1);
+        }
+        const str2=arr2.join(" ");
+        return str2
+    });
+    return temp
 }
 
 const fahrenheitToCelsius=(arr)=>{
