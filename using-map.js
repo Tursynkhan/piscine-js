@@ -38,7 +38,7 @@ const formattedForecasts = tempForecasts([
     {
       city: 'Pasadena',
       temperature: ' 101 °F',
-      state: 'california',
+      state: 'New hampshire',
       region: 'West',
     },
   ]);
