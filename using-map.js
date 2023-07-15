@@ -25,7 +25,8 @@ const trimTemp=(arr)=>{
 const tempForecasts=(arr)=>{
     return arr.map(obj=>{
         const celcius=Math.round((parseInt(obj.temperature)-32)*5/9);
-        return `${celcius}°Celsius in ${obj.city}, California`
+        const states=obj.state.charAt(0).toUpperCase()+obj.state.slice(1)
+        return `${celcius}°Celsius in ${obj.city}, ${states}`
     })
 }
 const formattedForecasts = tempForecasts([
